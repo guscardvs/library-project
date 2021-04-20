@@ -1,0 +1,25 @@
+{
+  "books": [
+    {
+      "name": "Gustavo",
+      "_id": "9b8000e7-9f6c-4ea4-9042-3cd8e2a754cb",
+      "author": "Gustavo",
+      "year": 2021,
+      "publisher": "Teste"
+    },
+    {
+      "name": "Teste",
+      "_id": "12cce031-2e25-4c7f-9236-7cb81e537d32",
+      "author": "Gustavo",
+      "year": 2000,
+      "publisher": "Teste"
+    },
+    {
+      "name": "Teste",
+      "_id": "123",
+      "author": "Gustavo",
+      "year": 2000,
+      "publisher": "Teste"
+    }
+  ]
+}
