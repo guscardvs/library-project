@@ -19,8 +19,8 @@ def get_value(string: str, warn: str = "Valor Inválido",validation_func = lambd
 def get_integer(string: str, warn: str, validation_func):
     return get_value(string, warn, lambda v: validation_func(int(v)))
 
+def create_book():
 
-def run():
     today = date.today()
     name = get_value("Digite o nome do livro: ")
     has_id = get_value("O livro possui identificador? (S/n)", validation_func= lambda v: v if v in ["S", "n"] else False) == "S"
@@ -53,3 +53,6 @@ def run():
         print("Erro inexperado")
     else:
         raise NotImplementedError
+
+def run():
+    create_book()
