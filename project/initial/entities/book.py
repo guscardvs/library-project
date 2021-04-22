@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 
+from initial.entities.main import Entity
+
 
 @dataclass(order=True, frozen=True)
-class Book:
+class Book(Entity):
     name: str
     _id: str
     author: str
@@ -24,3 +26,8 @@ class Book:
 
     def is_equal(self, book: "Book"):
         return self.id == book.id
+
+
+    @classmethod
+    def fields(cls) -> list[tuple[str, str]]:
+        return [("nome", "name"), ("id", "_id"), ("autor", "author"), ("ano", "year"), ("publicadora", "publisher")]
