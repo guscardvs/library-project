@@ -33,13 +33,13 @@ def validate_yes_or_no(v):
 def create_book():
     today = date.today()
     name = get_value("Digite o nome do livro: ")
-    has_id = (
+    if has_id := (
         get_value(
-            "O livro possui identificador? (S/n)", validation_func=validate_yes_or_no
+            "O livro possui identificador? (S/n)",
+            validation_func=validate_yes_or_no,
         )
         == "S"
-    )
-    if has_id:
+    ):
         id_ = get_value("Digite o identificador do livro: ")
     else:
         id_ = generate_id()
